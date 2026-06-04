@@ -7,6 +7,15 @@ nav: true
 nav_order: 2
 ---
 
+<style>
+  /* AEA-style hanging-indent references */
+  .publications ol.bibliography > li { margin-bottom: 1rem; }
+  .publications .row { display: block; margin: 0; }
+  .publications .econ-ref { padding-left: 2em; text-indent: -2em; line-height: 1.55; }
+  .publications .econ-ref .links { text-indent: 0; }
+  .publications .econ-ref .links a.btn { text-indent: 0; }
+</style>
+
 {% include bib_search.liquid %}
 
 <div class="publications">
