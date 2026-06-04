@@ -1,34 +1,42 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"ainsworth":
+  - firstname: ["Robert", "R."]
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"dehejia":
+  - firstname: ["Rajeev", "R.", "R. H.", "Rajeev H."]
+    url: https://pages.stern.nyu.edu/~rdehejia/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"de hoyos":
+  - firstname: ["Rafael", "R."]
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"galama":
+  - firstname: ["Titus", "T.", "T. J.", "Titus J."]
+    url: https://www.titusjalama.com/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"kreindler":
+  - firstname: ["Gabriel", "G.", "G. E.", "Gabriel E."]
+    url: https://gabrielkreindler.com/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"matache":
+  - firstname: ["Margareta", "M."]
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"mitrut":
+  - firstname: ["Andreea", "A."]
+    url: https://sites.google.com/site/andreeamitrut/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"pop-eleches":
+  - firstname: ["Cristian", "C."]
+    url: https://www.columbia.edu/~cp2124/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"scholtz":
+  - firstname: ["Cheryl", "C."]
+
+"thom":
+  - firstname: ["Kevin", "K."]
+    url: https://sites.google.com/view/kevinthom/
+
+"urquiola":
+  - firstname: ["Miguel", "M.", "M. S.", "Miguel S."]
+    url: https://www.columbia.edu/~mu2166/
+
+"zhang":
+  - firstname: ["Xian", "X."]
