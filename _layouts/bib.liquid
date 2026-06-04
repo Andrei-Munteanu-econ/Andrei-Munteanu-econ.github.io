@@ -42,10 +42,10 @@
     {%- assign pages = entry.pages | replace: '--', '–' -%}
     {%- if entry.type == 'article' -%}
       <em>{{ entry.journal }}</em>
-      {%- if entry.volume or pages -%}
+      {%- if entry.volume or entry.pages -%}
         {%- if entry.volume %} {{ entry.volume }}{% endif -%}
         {%- if entry.number %} ({{ entry.number }}){% endif -%}
-        {%- if pages %}: {{ pages }}{% endif -%}
+        {%- if entry.pages %}: {{ pages }}{% endif -%}
         {%- if entry.note %}, {{ entry.note }}{% endif -%}.
       {%- else -%}
         {%- if entry.note %}. {{ entry.note }}{% endif -%}.
