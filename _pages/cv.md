@@ -1,12 +1,15 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
-title: CV
+title: cv
 nav: true
-nav_order: 5
-cv_pdf: /assets/pdf/cv.pdf
-cv_format: rendercv # options: rendercv, jsonresume
-description:
-toc:
-  sidebar: left
+nav_order: 3
 ---
+
+<div style="text-align:center; margin-bottom: 1.5rem;">
+  <a href="/assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-file-pdf"></i> Download PDF
+  </a>
+</div>
+
+<iframe src="/assets/pdf/cv.pdf" width="100%" height="950" style="border:none;"></iframe>
