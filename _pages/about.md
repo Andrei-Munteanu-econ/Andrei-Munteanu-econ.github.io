@@ -24,6 +24,8 @@ latest_posts:
 I am an Assistant Professor of Economics at the [Université du Québec à Montréal (UQAM)](https://uqam.ca), and Academic Director of the CIQSS-UQAM-INRS Research Data Center. I am an applied microeconomist interested in the economics of education and labor.
 
 <style>
+  /* Shrink the homepage social icons (default is ~1.7rem) */
+  .social .contact-icons a i::before { font-size: 1.2rem; }
   /* Brand-color the homepage social icons (dark-mode-safe: black/white brands omitted) */
   .social .contact-icons a i.fa-linkedin::before       { color: #0a66c2; } /* LinkedIn blue */
   .social .contact-icons a i.fa-bluesky::before        { color: #1185fe; } /* Bluesky blue  */
