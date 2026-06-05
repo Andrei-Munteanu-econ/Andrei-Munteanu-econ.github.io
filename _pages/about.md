@@ -24,8 +24,18 @@ latest_posts:
 I am an Assistant Professor of Economics at the [Université du Québec à Montréal (UQAM)](https://uqam.ca), and Academic Director of the CIQSS-UQAM-INRS Research Data Center. I am an applied microeconomist interested in the economics of education and labor.
 
 <style>
-  /* Shrink the homepage social icons (default is ~1.7rem) */
-  .social .contact-icons a i::before { font-size: 1.2rem; }
+  /* Size + even spacing for the homepage social icons. The gem ships a huge 4rem
+     container whose inter-icon whitespace scales with it (oversized, and uneven because
+     academicons vs FontAwesome glyphs differ in width). Flexbox `gap` removes the
+     whitespace entirely so spacing is uniform; tweak gap/font-size below to taste. */
+  .social .contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* matches the gem's .social { text-align: center } */
+    align-items: center;
+    gap: 0.6rem;             /* spacing between icons */
+    font-size: 1.6rem;       /* icon size */
+  }
   /* Brand-color the homepage social icons (dark-mode-safe: black/white brands omitted) */
   .social .contact-icons a i.fa-linkedin::before       { color: #0a66c2; } /* LinkedIn blue */
   .social .contact-icons a i.fa-bluesky::before        { color: #1185fe; } /* Bluesky blue  */
