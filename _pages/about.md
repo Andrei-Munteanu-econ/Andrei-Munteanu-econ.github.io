@@ -21,7 +21,7 @@ latest_posts:
   enabled: false
 ---
 
-I am an Assistant Professor of Economics at the [Université du Québec à Montréal (UQAM)](https://uqam.ca), and Academic Director of the CIQSS-UQAM-INRS Research Data Center. I am an applied microeconomist interested in the economics of education and labor.
+I am an Assistant Professor of Economics at the [Université du Québec à Montréal (UQAM)](https://uqam.ca), and Academic Director of the CIQSS-UQAM-INRS Research Data Center. I am an applied microeconomist interested in the economics of education, inequality, and labor.
 
 <style>
   /* Size + even spacing for the homepage social icons. The gem ships a huge 4rem
