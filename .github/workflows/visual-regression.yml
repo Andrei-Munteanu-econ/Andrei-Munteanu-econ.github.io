@@ -38,6 +38,9 @@ jobs:
   visual-regression:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # al-folio template dev test: diffs against an upstream visual baseline, so it
+    # only makes sense on the upstream repo, not on a personalized fork.
+    if: github.repository == 'alshedivat/al-folio'
     steps:
       - name: Checkout candidate 🛎️
         uses: actions/checkout@v4

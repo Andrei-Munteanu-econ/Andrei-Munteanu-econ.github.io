@@ -41,6 +41,9 @@ on:
 jobs:
   comments-integration-tests:
     runs-on: ubuntu-latest
+    # al-folio template dev tests: they require the demo blog posts/projects that a
+    # personalized site removes, so they only make sense on the upstream repo.
+    if: github.repository == 'alshedivat/al-folio'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
