@@ -50,10 +50,17 @@
       {%- else -%}
         {%- if entry.note %}. {{ entry.note }}{% endif -%}.
       {%- endif -%}
-    {%- elsif entry.type == 'techreport' -%}
-      {%- if entry.institution %}{{ entry.institution }} {% endif -%}
-      {%- if entry.series %}{{ entry.series }} {% endif -%}
-      {%- if entry.number %}{{ entry.number }}{% endif -%}.
+    {%- elsif entry.institution -%}
+      {%- comment -%}
+        Reports (@techreport). Keyed off `institution` rather than `entry.type`:
+        jekyll-scholar does not surface 'techreport' as entry.type here, so the
+        old `entry.type == 'techreport'` test never matched and reports rendered
+        with no venue line at all. `institution` is present on reports and on
+        nothing else in this bibliography, so it is a reliable discriminator.
+      {%- endcomment -%}
+      {{ entry.institution }}
+      {%- if entry.series %} {{ entry.series }}{% endif -%}
+      {%- if entry.number %} {{ entry.number }}{% endif -%}.
     {%- else -%}
       {%- if entry.note %}{{ entry.note }}.{% endif -%}
     {%- endif -%}
