@@ -25,8 +25,16 @@
         {%- if author_array_size > 2 -%}, {% endif -%}
         {%- if forloop.last -%}{%- if author_array_size == 2 -%}, and {% else %}and {% endif -%}{%- endif -%}
       {%- endunless -%}
+      {%- comment -%}
+        Surname including any von particle ("de", "van der", ...). BibTeX parses
+        "de Hoyos, Rafael" as von="de" + last="Hoyos", and the `latex` bibtex
+        filter strips the {de Hoyos} braces that would normally protect it, so
+        printing author.last alone drops the particle. Falls back silently to
+        author.last when von is absent or unexposed.
+      {%- endcomment -%}
+      {%- capture von_last -%}{% if author.von and author.von != '' %}{{ author.von }} {% endif %}{{ author.last }}{%- endcapture -%}
       {%- comment -%} first author = "Last, First"; remaining = "First Last" {%- endcomment -%}
-      {%- capture name_text -%}{%- if forloop.first -%}{{ author.last }}, {{ author.first }}{%- else -%}{{ author.first }} {{ author.last }}{%- endif -%}{%- endcapture -%}
+      {%- capture name_text -%}{%- if forloop.first -%}{{ von_last }}, {{ author.first }}{%- else -%}{{ author.first }} {{ von_last }}{%- endif -%}{%- endcapture -%}
       {%- if author_is_self -%}<em>{{ name_text }}</em>
       {%- else -%}{{ name_text }}
       {%- endif -%}
