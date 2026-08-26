@@ -5,19 +5,138 @@
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%8A&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://andrei-munteanu-econ.github.io/publications/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Andrei</span> Munteanu </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About me </a> </li> <li class="nav-item active"> <a class="nav-link" href="/publications/">research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">research</h1> <p class="post-description"></p> </header> <article> <style>
-  /* AEA-style hanging-indent references */
-  .publications ol.bibliography > li { margin-bottom: 1rem; }
+  /* ---------------------------------------------------------------------
+     Publication list — "academic site" layout (see _layouts/bib.liquid).
+     Colours come from al_folio_core's --global-* variables so light/dark
+     mode both work without a second ruleset.
+     --------------------------------------------------------------------- */
+
+  .publications ol.bibliography { padding-left: 0; }
+  .publications ol.bibliography > li { margin-bottom: 1.6rem; list-style: none; }
   .publications .row { display: block; margin: 0; }
-  .publications .econ-ref { padding-left: 2em; text-indent: -2em; line-height: 1.55; }
-  .publications .econ-ref .links { text-indent: 0; }
-  .publications .econ-ref .links a.btn { text-indent: 0; }
-</style> <script src="/assets/js/bibsearch.js?v=1bc438ca9037884cc579601c09afd847" type="module"></script> <p><input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter"></p> <div class="publications"> <h2 class="bibliography">Publications</h2> <ol class="bibliography"> <li> <div class="row"> <div id="mitrut2026roma" class="col-12 econ-ref">Mitrut, Andreea, Gabriel Kreindler, Margareta Matache, <em>Andrei Munteanu</em>, and Cristian Pop-Eleches. 2026. “Education and Selection into Ethnic Identification: Evidence from Roma People in Romania.” <em>American Economic Journal: Applied Economics</em>. Conditionally accepted. NBER Working Paper 34383. <span class="links"><a href="/assets/pdf/roma.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">mitrut2026roma</span><span class="p">,</span>
+
+  .publications h2.bibliography {
+    margin: 2.2rem 0 1.2rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  /* ---- entry grid: chip gutter + body ---- */
+  .publications .pub-entry {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    column-gap: 1rem;
+    padding: 0;
+  }
+
+  .publications .pub-chip-col { padding-top: 0.15rem; }
+
+  .publications .pub-chip {
+    display: inline-block;
+    width: 100%;
+    padding: 0.3rem 0.2rem;
+    border-radius: 4px;
+    background-color: var(--global-theme-color);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+    word-break: break-word;
+  }
+
+  /* ---- body lines ---- */
+  .publications .pub-title {
+    margin-bottom: 0.18rem;
+    font-size: 1.06rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--global-text-color);
+  }
+
+  .publications .pub-authors {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+  }
+
+  .publications .pub-self {
+    font-weight: 700;
+    color: var(--global-text-color);
+  }
+
+  .publications .pub-year::before {
+    content: " · ";
+    color: var(--global-divider-color);
+  }
+
+  .publications .pub-venue {
+    margin-top: 0.1rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+  }
+
+  .publications .pub-venue em {
+    font-style: italic;
+    color: var(--global-text-color);
+  }
+
+  /* ---- status pill ---- */
+  .publications .pub-meta {
+    margin-top: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+  }
+
+  .publications .pub-status {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--global-text-color-light);
+  }
+
+  .publications .pub-status--conditionally-accepted {
+    border-color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+    color: #fff;
+  }
+
+  /* ---- link buttons ---- */
+  .publications .links { display: inline-block; margin-top: 0.5rem; }
+  .publications .links .btn { margin-right: 0.3rem; }
+
+  /* ---- narrow screens: chip moves above the title ---- */
+  @media (max-width: 576px) {
+    .publications .pub-entry {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
+    }
+    .publications .pub-chip { width: auto; padding: 0.2rem 0.55rem; }
+  }
+</style> <script src="/assets/js/bibsearch.js?v=1bc438ca9037884cc579601c09afd847" type="module"></script> <p><input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter"></p> <div class="publications"> <h2 class="bibliography">Publications</h2> <ol class="bibliography"> <li> <div class="row"> <div id="mitrut2026roma" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">AEJ:Applied</span></div> <div class="pub-body"> <div class="pub-title">Education and Selection into Ethnic Identification: Evidence from Roma People in Romania</div> <div class="pub-authors">Andreea Mitrut, Gabriel Kreindler, Margareta Matache, <span class="pub-self">Andrei Munteanu</span>, and Cristian Pop-Eleches<span class="pub-year">2026</span> </div> <div class="pub-venue"> <em>American Economic Journal: Applied Economics</em> </div> <div class="pub-meta"> <span class="pub-status pub-status--conditionally-accepted">Conditionally accepted</span><span class="pub-note">NBER Working Paper 34383</span> </div> <span class="links"><a href="/assets/pdf/roma.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">mitrut2026roma</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Education and Selection into Ethnic Identification: {E}vidence from {R}oma People in {R}omania}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Mitrut, Andreea and Kreindler, Gabriel and Matache, Margareta and Munteanu, Andrei and Pop-Eleches, Cristian}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{American Economic Journal: Applied Economics}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
-  <span class="na">note</span> <span class="p">=</span> <span class="s">{Conditionally accepted. NBER Working Paper 34383}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2026schoolchoice" class="col-12 econ-ref"> <em>Munteanu, Andrei</em>. 2026. “School Choice, Student Sorting, and Academic Performance.” <em>Review of Economics and Statistics</em> 108 (4): 897–913. <span class="links"><a href="/assets/pdf/school-choice.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a href="https://www.palladiummag.com/2025/08/29/why-romania-excels-in-international-olympiads/" class="btn btn-sm z-depth-0" role="button" title="Palladium Magazine" rel="external nofollow noopener" target="_blank">Press Coverage</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">munteanu2026schoolchoice</span><span class="p">,</span>
+  <span class="na">note</span> <span class="p">=</span> <span class="s">{NBER Working Paper 34383}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2026schoolchoice" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">REStat</span></div> <div class="pub-body"> <div class="pub-title">School Choice, Student Sorting, and Academic Performance</div> <div class="pub-authors"> <span class="pub-self">Andrei Munteanu</span><span class="pub-year">2026</span> </div> <div class="pub-venue"> <em>Review of Economics and Statistics</em> 108(4), 897–913</div> <span class="links"><a href="/assets/pdf/school-choice.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a href="https://www.palladiummag.com/2025/08/29/why-romania-excels-in-international-olympiads/" class="btn btn-sm z-depth-0" role="button" title="Palladium Magazine" rel="external nofollow noopener" target="_blank">Press Coverage</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">munteanu2026schoolchoice</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{School Choice, Student Sorting, and Academic Performance}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Munteanu, Andrei}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{Review of Economics and Statistics}</span><span class="p">,</span>
@@ -26,7 +145,7 @@
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{897--913}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">press</span> <span class="p">=</span> <span class="s">{https://www.palladiummag.com/2025/08/29/why-romania-excels-in-international-olympiads/}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2023federalism" class="col-12 econ-ref">Scholtz, Christa, and <em>Andrei Munteanu</em>. 2023. “How Cooperative Is “Cooperative Federalism”? The Political Limits to Intergovernmental Cooperation under a De Facto Concurrency Rule.” <em>Constitutional Political Economy</em> 34 (1): 111–134. <span class="links"><a href="/assets/pdf/federalism.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">munteanu2023federalism</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2023federalism" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">CPE</span></div> <div class="pub-body"> <div class="pub-title">How Cooperative Is “Cooperative Federalism”? The Political Limits to Intergovernmental Cooperation under a De Facto Concurrency Rule</div> <div class="pub-authors">Christa Scholtz, and <span class="pub-self">Andrei Munteanu</span><span class="pub-year">2023</span> </div> <div class="pub-venue"> <em>Constitutional Political Economy</em> 34(1), 111–134</div> <span class="links"><a href="/assets/pdf/federalism.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">munteanu2023federalism</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{How Cooperative Is ``Cooperative Federalism''? {T}he Political Limits to Intergovernmental Cooperation under a De Facto Concurrency Rule}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Scholtz, Christa and Munteanu, Andrei}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{Constitutional Political Economy}</span><span class="p">,</span>
@@ -34,22 +153,21 @@
   <span class="na">number</span> <span class="p">=</span> <span class="s">{1}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{111--134}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">Working Papers</h2> <ol class="bibliography"> <li> <div class="row"> <div id="ainsworth2025malleable" class="col-12 econ-ref">Ainsworth, Robert, Rajeev Dehejia, <em>Andrei Munteanu</em>, Cristian Pop-Eleches, and Miguel Urquiola. 2025. “STEM versus Humanities: High School Curriculum and the Malleability of Beliefs, Preferences, and Values.” NBER Working Paper 34502. Submitted. <span class="links"><a href="/assets/pdf/malleable-minds.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">ainsworth2025malleable</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> </ol> <h2 class="bibliography">Working Papers</h2> <ol class="bibliography"> <li> <div class="row"> <div id="ainsworth2025malleable" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">WP</span></div> <div class="pub-body"> <div class="pub-title">STEM versus Humanities: High School Curriculum and the Malleability of Beliefs, Preferences, and Values</div> <div class="pub-authors">Robert Ainsworth, Rajeev Dehejia, <span class="pub-self">Andrei Munteanu</span>, Cristian Pop-Eleches, and Miguel Urquiola<span class="pub-year">2025</span> </div> <div class="pub-meta"> <span class="pub-status pub-status--submitted">Submitted</span><span class="pub-note">NBER Working Paper 34502</span> </div> <span class="links"><a href="/assets/pdf/malleable-minds.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">ainsworth2025malleable</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{STEM} versus Humanities: {H}igh School Curriculum and the Malleability of Beliefs, Preferences, and Values}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Ainsworth, Robert and Dehejia, Rajeev and Munteanu, Andrei and Pop-Eleches, Cristian and Urquiola, Miguel}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">note</span> <span class="p">=</span> <span class="s">{NBER Working Paper 34502. Submitted}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2026ontario" class="col-12 econ-ref"> <em>Munteanu, Andrei</em>, and Xian Zhang. 2026. “The Unintended Consequences of Shortening High School: Evidence from Ontario.” Submitted. <span class="links"><a href="/assets/pdf/ontario.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">munteanu2026ontario</span><span class="p">,</span>
+  <span class="na">note</span> <span class="p">=</span> <span class="s">{NBER Working Paper 34502}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> <li> <div class="row"> <div id="munteanu2026ontario" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">WP</span></div> <div class="pub-body"> <div class="pub-title">The Unintended Consequences of Shortening High School: Evidence from Ontario</div> <div class="pub-authors"> <span class="pub-self">Andrei Munteanu</span>, and Xian Zhang<span class="pub-year">2026</span> </div> <div class="pub-meta"><span class="pub-status pub-status--submitted">Submitted</span></div> <span class="links"><a href="/assets/pdf/ontario.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">munteanu2026ontario</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{The Unintended Consequences of Shortening High School: {E}vidence from {O}ntario}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Munteanu, Andrei and Zhang, Xian}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
-  <span class="na">note</span> <span class="p">=</span> <span class="s">{Submitted}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div id="galama2025intergenerational" class="col-12 econ-ref">Galama, Titus, <em>Andrei Munteanu</em>, and Kevin Thom. 2024. “Intergenerational Persistence in the Effects of Compulsory Schooling in the US.” Tinbergen Institute Discussion Paper 24-006/V. Submitted. <span class="links"><a href="/assets/pdf/intergenerational-persistence.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">galama2025intergenerational</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> <li> <div class="row"> <div id="galama2025intergenerational" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">WP</span></div> <div class="pub-body"> <div class="pub-title">Intergenerational Persistence in the Effects of Compulsory Schooling in the US</div> <div class="pub-authors">Titus Galama, <span class="pub-self">Andrei Munteanu</span>, and Kevin Thom<span class="pub-year">2024</span> </div> <div class="pub-meta"> <span class="pub-status pub-status--submitted">Submitted</span><span class="pub-note">Tinbergen Institute Discussion Paper 24-006/V</span> </div> <span class="links"><a href="/assets/pdf/intergenerational-persistence.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">galama2025intergenerational</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Intergenerational Persistence in the Effects of Compulsory Schooling in the {US}}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Galama, Titus and Munteanu, Andrei and Thom, Kevin}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">note</span> <span class="p">=</span> <span class="s">{Tinbergen Institute Discussion Paper 24-006/V. Submitted}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">Policy Work</h2> <ol class="bibliography"> <li> <div class="row"> <div id="dehoyos2026schoolgrants" class="col-12 econ-ref">de Hoyos, Rafael, <em>Andrei Munteanu</em>, and Cristian Pop-Eleches. 2026. “The Impact of School Grants on Disadvantaged Students: Experimental Evidence from Romania.” World Bank Policy Research Working Paper WPS11408. <span class="links"><a href="http://documents.worldbank.org/curated/en/099201206032658803" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a><a href="/assets/pdf/school-grants.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@techreport</span><span class="p">{</span><span class="nl">dehoyos2026schoolgrants</span><span class="p">,</span>
+  <span class="na">note</span> <span class="p">=</span> <span class="s">{Tinbergen Institute Discussion Paper 24-006/V}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> </ol> <h2 class="bibliography">Policy Work</h2> <ol class="bibliography"> <li> <div class="row"> <div id="dehoyos2026schoolgrants" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">WB WPS</span></div> <div class="pub-body"> <div class="pub-title">The Impact of School Grants on Disadvantaged Students: Experimental Evidence from Romania</div> <div class="pub-authors">Rafael de Hoyos, <span class="pub-self">Andrei Munteanu</span>, and Cristian Pop-Eleches<span class="pub-year">2026</span> </div> <div class="pub-venue"> World Bank Policy Research Working Paper WPS11408</div> <span class="links"><a href="http://documents.worldbank.org/curated/en/099201206032658803" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a><a href="/assets/pdf/school-grants.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@techreport</span><span class="p">{</span><span class="nl">dehoyos2026schoolgrants</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{The Impact of School Grants on Disadvantaged Students: {E}xperimental Evidence from {R}omania}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{de Hoyos}, Rafael and Munteanu, Andrei and Pop-Eleches, Cristian}</span><span class="p">,</span>
   <span class="na">institution</span> <span class="p">=</span> <span class="s">{World Bank}</span><span class="p">,</span>
@@ -58,7 +176,7 @@
   <span class="na">series</span> <span class="p">=</span> <span class="s">{Policy Research Working Paper}</span><span class="p">,</span>
   <span class="na">number</span> <span class="p">=</span> <span class="s">{WPS11408}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{http://documents.worldbank.org/curated/en/099201206032658803}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div id="fonseca2026cirano" class="col-12 econ-ref">Fonseca, Raquel, Catherine Haeck, and <em>Andrei Munteanu</em>. 2026. “L’évolution des rendements salariaux des compétences au Québec : une analyse transversale et longitudinale.” CIRANO Rapport de projet 9186. <span class="links"><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@techreport</span><span class="p">{</span><span class="nl">fonseca2026cirano</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> <li> <div class="row"> <div id="fonseca2026cirano" class="col-12 pub-entry"> <div class="pub-chip-col"><span class="pub-chip">CIRANO</span></div> <div class="pub-body"> <div class="pub-title">L’évolution des rendements salariaux des compétences au Québec : une analyse transversale et longitudinale</div> <div class="pub-authors">Raquel Fonseca, Catherine Haeck, and <span class="pub-self">Andrei Munteanu</span><span class="pub-year">2026</span> </div> <div class="pub-venue"> CIRANO Rapport de projet 9186</div> <div class="pub-meta"><span class="pub-note">Produit pour le ministère des Finances du Québec</span></div> <span class="links"><a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a></span><div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@techreport</span><span class="p">{</span><span class="nl">fonseca2026cirano</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{L'évolution des rendements salariaux des compétences au {Q}uébec : une analyse transversale et longitudinale}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Fonseca, Raquel and Haeck, Catherine and Munteanu, Andrei}</span><span class="p">,</span>
   <span class="na">institution</span> <span class="p">=</span> <span class="s">{CIRANO}</span><span class="p">,</span>
@@ -67,7 +185,7 @@
   <span class="na">series</span> <span class="p">=</span> <span class="s">{Rapport de projet}</span><span class="p">,</span>
   <span class="na">number</span> <span class="p">=</span> <span class="s">{9186}</span><span class="p">,</span>
   <span class="na">note</span> <span class="p">=</span> <span class="s">{Produit pour le ministère des Finances du Québec}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Andrei Munteanu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </div> </li> </ol> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Andrei Munteanu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
